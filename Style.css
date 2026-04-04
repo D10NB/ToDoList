@@ -1,15 +1,51 @@
+div{
+  /* border: 2px solid red; */
+}
+
+
 body{
-    background-color: #0A62B8;
 
 }
 
-.AchterGrondBox {
+.AchterGrondLinks{
+  background-color: #0A62B8;  
   width: 500px;
-  height: 500px;
-  background-color: #10101D;
+  height: 700px;
+  rotate: -30deg;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  
+  top: 800px;
+  left: -300px;
+  z-index: 30;
 }
 
+.AchterGrondMidL{
+  background-color: #E9A9C4;
+  width: 1500px;
+  height: 2500px;
+  rotate: -30deg;
+  position: absolute;
+  top: -450px;
+  left: 0px;
+  z-index: 20;
+}
+
+.AchterGrondMidR{
+  background-color: #F599B2;
+  width: 1000px;
+  height: 2600px;
+  rotate: -40deg;
+  position: absolute;
+  top: -650px;
+  left: 1000px;
+  z-index: 10;
+}
+.AchterGrondRechts{
+  background-color: #F8889A;
+  width: 1000px;
+  height: 2000px;
+  rotate: -30deg;
+  position: absolute;
+  top: -650px;
+  left: 1850px;
+  z-index: 1;
+}
