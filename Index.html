@@ -14,16 +14,15 @@
         </head>
 
         <body>
-            <div class="AchterGrondLinks"></div>
-            <div class="AchterGrondMidL"></div>
-            <div class="AchterGrondMidR"></div>
-            <div class="AchterGrondRechts"></div>
-            <div class="Container">
-                <div class="ListHolder">
+            <div class="app-container">
+                <h1 class="app-header">To Do List</h1>
+                <div class="add-task">
+                    <input type="text" autocomplete="off" placeholder="Voeg taak toe" v-model="tasks.name"
+                    @keyup.enter="newItem" class="Task-input">
+                    <input type="submit" value="" class="submit-task" @clik="newItem" title="Voeg toe">
 
                 </div>
             </div>
-            
 
         </body>
 
