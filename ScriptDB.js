@@ -1,4 +1,4 @@
-const API_URL = "http://192.168.x.x:3000/tasks"; // Gebruik hier je eigen IPv4!
+const API_URL = "http://192.168.1.19:3000/tasks"; // Gebruik hier je eigen IPv4!
 
 createApp({
     data() {
