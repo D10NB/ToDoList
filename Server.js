@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 let db;
+//Maak hier de get, post en delete functies.
 
 async function startServer() {
     db = await open({
