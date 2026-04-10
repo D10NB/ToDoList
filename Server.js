@@ -12,7 +12,7 @@ let db;
 
 async function startServer() {
     db = await open({
-        filename: Path.join(__dirname, 'database.db'),
+        filename: path.join(__dirname, 'database.db'),
         driver: sqlite3.Database
     });
 
