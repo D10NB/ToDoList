@@ -9,7 +9,21 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 let db;
-//Maak hier de get, post en delete functies.
+app.get('/tasks', async (req, res) => {
+    const tasks = await db.all("SELECT * FROM tasks");
+    res.json(tasks);
+});
+
+app.post('/tasks', async (req, res) => {
+    const { name } = req.body;
+    await db.run("INSERT INTO tasks (name) VALUES (?)", [name]);
+    res.sendStatus(201);
+});
+
+app.delete('/tasks/:id', async (req, res) => {
+    await db.run("DELETE FROM tasks WHERE id = ?", [req.params.id]);
+    res.sendStatus(200);
+});
 
 async function startServer() {
     db = await open({
