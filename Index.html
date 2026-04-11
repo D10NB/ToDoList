@@ -20,7 +20,7 @@
                 <ul class="task-list">
                     <li class="task-list-item" v-for="task in tasks">
                         <label class="task-list-item-label">
-                            <input type="checkbox">
+                            <input type="checkbox" :checked="task.completed" @change="toggleCompletion(task, $event)">
                             <span>{{ task.name }}</span>
                         </label>
                         <span @click="delItem(task)" class="delete-btn" title="Delete Task">{{ task.del }}</span>

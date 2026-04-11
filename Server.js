@@ -33,7 +33,7 @@ async function startServer() {
     });
 
     await db.exec(
-        "CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, completed INTEGER)"
+        "CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, completed INTEGER DEFAULT 0)"
     );
 
     app.listen(3000,'0.0.0.0', () => {

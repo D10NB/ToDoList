@@ -37,6 +37,10 @@ createApp({
             });
 
             this.fetchTasks();
+        },
+        async toggleCompletion(task, event){
+            console.log(event.target.checked);
+
         }
     }
 }).mount('#taskList');
