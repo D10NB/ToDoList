@@ -9,7 +9,7 @@ createApp({
     },
 
     async mounted() {
-        this.fetchTasks(); // Haal taken op bij laden
+        this.fetchTasks(); 
     },
 
     methods: {
@@ -28,7 +28,7 @@ createApp({
             });
 
             this.newTaskName = '';
-            this.fetchTasks(); // opnieuw laden
+            this.fetchTasks(); 
         },
 
         async delItem(task) {
@@ -36,7 +36,7 @@ createApp({
                 method: 'DELETE'
             });
 
-            this.fetchTasks(); // opnieuw laden
+            this.fetchTasks();
         }
     }
 }).mount('#taskList');

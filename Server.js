@@ -3,6 +3,7 @@ const cors = require('cors');
 const { open } = require('sqlite');
 const sqlite3 = require('sqlite3');
 const path = require('path');
+const { networkInterfaces } = require('os');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -32,11 +33,11 @@ async function startServer() {
     });
 
     await db.exec(
-        "CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)"
+        "CREATE TABLE IF NOT EXISTS tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, completed INTEGER)"
     );
 
     app.listen(3000,'0.0.0.0', () => {
-        console.log("Server draait op http://IP:3000");
+        console.log("Server draait op http://192.168.1.19:3000");
     });
 }
 
