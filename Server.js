@@ -26,6 +26,13 @@ app.delete('/tasks/:id', async (req, res) => {
     res.sendStatus(200);
 });
 
+app.patch('/tasks/:id', async (req, res) => {
+    const { completed } = req.body;
+    await db.run("UPDATE tasks SET completed = ? WHERE id = ?"
+        , [completed, req.params.id]);
+    res.sendStatus(200);
+});
+
 async function startServer() {
     db = await open({
         filename: path.join(__dirname, 'database.db'),
