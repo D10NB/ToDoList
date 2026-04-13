@@ -39,11 +39,7 @@ createApp({
             this.fetchTasks();
         },
         async toggleCompletion(task, event){
-            console.log(event.target.checked);
-            console.log(task.id);
-
             const completion = event.target.checked ? 1 : 0;
-            console.log(completion);
 
             await fetch(`/tasks/${task.id}`, {
                 method: "PATCH",
