@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const socket = io();
 
 createApp({
     data() {
@@ -10,6 +11,11 @@ createApp({
 
     async mounted() {
         this.fetchTasks(); 
+
+        socket.on("TaskUpdate", () =>{
+            console.log("Er is een update ontvangen");
+            this.fetchTasks();
+        })
     },
 
     methods: {
