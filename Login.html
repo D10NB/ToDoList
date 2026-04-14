@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List Login</title>
+
+
+</head>
+<body>
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Wie ben je?"> 
+    <button onclick="login()">Login</button>
+    <script>
+        function login(){
+            const name = document.getElementById("username").value;
+            
+            if(!name) return;
+
+            localStorage.setItem("username", name);
+            window.location.href = "Index.html";
+            
+        
+        }
+    </script>
+    
+</body>
+</html>
