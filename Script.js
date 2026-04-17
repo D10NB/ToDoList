@@ -1,5 +1,8 @@
 const { createApp } = Vue;
 const socket = io();
+const username = localStorage.getItem("username");
+
+if(!username) window.location.href = "Login.html";
 
 createApp({
     data() {

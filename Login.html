@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="LoginStyle.css" rel="stylesheet"/>
+    <link rel="icon" type="images/png" href="IconResources/PageIcon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List Login</title>
+
+    <title>Login</title>
 
 
 </head>
 <body>
-    <h1>Login</h1>
-    <input type="text" id="username" placeholder="Wie ben je?"> 
-    <button onclick="login()">Login</button>
-    <script>
-        function login(){
+    <div class="Login-Container" id="Login">
+        <h1 class="Login-Header">Login</h1>
+        <div class="Login-UsernameHolder">
+            <input type="text" id="username" autocomplete="off" placeholder="Voer je voornaam in!"
+            onkeyup="if(event.key === 'Enter') login()"> 
+        </div>
+        <button onclick="login()" class="Login-Button">Login</button>
+    </div>
+        <script>
+            function login(){
             const name = document.getElementById("username").value;
             
             if(!name) return;
