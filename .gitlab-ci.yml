@@ -17,3 +17,11 @@ test_backend:
   stage: test
   script:
    - npm test
+  
+test_api:
+  stage: test
+  script: 
+    - node Server.js &
+    - sleep 5
+    - curl http://localhost:3000/tasks
+    
