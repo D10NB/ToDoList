@@ -4,7 +4,8 @@
   "description": "This is an repo for me to understand the basics of webdev. Feel free to look and use the code if useful.",
   "main": "Script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Server.js",
+    "test": "node --check Server.js"
   },
   "repository": {
     "type": "git",
