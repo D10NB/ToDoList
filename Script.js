@@ -60,5 +60,14 @@ createApp({
         }
     }
 }).mount('#taskList');
-//Test
-//test
+
+createApp({
+    methods:{
+        logout(){
+            localStorage.removeItem("username");
+            window.location.href = "Login.html";
+            console.log("Logout function");
+
+        }
+    }
+}).mount("#navApp")
