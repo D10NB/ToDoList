@@ -12,6 +12,9 @@
         </head>
 
         <body>
+            <div class="Nav-bar" id ="navApp">
+                <button class="Logout-Button" @click="logout">Logout</button>
+            </div>
             <div class="app-container" id="taskList">
                 <h1 class="app-header">To Do List</h1>
                 <div class="add-task">
@@ -28,9 +31,6 @@
                         <span @click="delItem(task)" class="delete-btn" title="Delete Task">{{ task.del }}</span>
                     </li>
                 </ul>
-            </div>
-            <div class="Logout-Button" id ="navApp">
-                <button @click="logout">Logout</button>
             </div>
         </body>
         
